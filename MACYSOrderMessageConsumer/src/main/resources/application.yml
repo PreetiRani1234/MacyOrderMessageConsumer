@@ -1,17 +1,24 @@
 server:
   port: 9001
 spring:
-  application:
-     name: consumer-service
   datasource:
-    url: jdbc:mysql://localhost:3306/consumer-data
+    url: jdbc:mysql://localhost:3306/consumer-json-data
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
   jpa:
     hibernate.ddl-auto: update
     properties:
-         hibernate:
-            dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+spring.rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+
+queue:
+  name: macy-test-queue
         
   
