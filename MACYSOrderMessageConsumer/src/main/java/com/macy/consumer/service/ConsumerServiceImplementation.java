@@ -10,6 +10,7 @@ import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -25,6 +26,7 @@ import com.macy.consumer.repo.ConsumerXmlMessageRepository;
 import com.macy.consumer.utils.AppConstant;
 import com.macy.consumer.utils.EntityPojoConverterUtil;
 
+@Service
 public class ConsumerServiceImplementation implements ConsumerServiceInterface {
 
     @Autowired
